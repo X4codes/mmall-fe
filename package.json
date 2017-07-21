@@ -4,8 +4,8 @@
   "description": "mmall-frontEndCodes",
   "main": "index.js",
   "scripts": {
-    "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8088",
-    "dist":"set WEBPACK_ENV=online && webpack -p"
+    "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 3000",
+    "dist": "set WEBPACK_ENV=online && webpack -p"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,8 @@
     "webpack-dev-server": "^1.16.5"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
+    "hogan": "^1.0.2",
     "jquery": "^3.2.1"
   }
 }

@@ -2,7 +2,7 @@
 * @Author: HUANGXI
 * @Date:   2017-07-12 19:19:30
 * @Last Modified by:   HUANGXI
-* @Last Modified time: 2017-07-18 21:22:43
+* @Last Modified time: 2017-07-21 17:20:36
 */
 
 var webpack           = require('webpack');
@@ -48,10 +48,11 @@ var config = {
 	},
 	resolve : {
 		alias : {
-			util    : __dirname + '/src/util',
-			page    : __dirname + '/src/page',
-			service : __dirname + '/src/service',
-			image   : __dirname + '/src/image',
+			util     	  : __dirname + '/src/util',
+			page    	  : __dirname + '/src/page',
+			service       : __dirname + '/src/service',
+			image   	  : __dirname + '/src/image',
+			node_modules  : __dirname + '/node_modules',
 		}
 	},
 	plugins:[
@@ -69,7 +70,7 @@ var config = {
 };
 
 if('dev' === WEBPACK_ENV){
-	config.entry.common.push('webpack-dev-server/client?http://localhost:8088/')
+	config.entry.common.push('webpack-dev-server/client?http://localhost:3000/')
 }
 
 module.exports = config;
