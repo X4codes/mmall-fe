@@ -2,7 +2,7 @@
 * @Author: HUANGXI
 * @Date:   2017-07-12 19:19:30
 * @Last Modified by:   HUANGXI
-* @Last Modified time: 2017-07-21 17:20:36
+* @Last Modified time: 2017-08-11 14:30:40
 */
 
 var webpack           = require('webpack');
@@ -15,10 +15,11 @@ console.log(WEBPACK_ENV)
 
 
 // get html-webpack-plugin args
-var getHtmlConfig = function (name) {
+var getHtmlConfig = function (name, title) {
 	return {
 		template : './src/view/' + name + '.html',
 		filename : 'view/' + name + '.html',
+		title	 : title,
 		inject   : true,
 		hash     : true,
 		chunks   : ['common', name]
@@ -31,6 +32,7 @@ var config = {
 		'index' : ['./src/page/index/index.js'],
 		'login' : ['./src/page/login/index.js'],
 		'common': ['./src/page/common/index.js'],
+		'result': ['./src/page/result/index.js'],
 	},
 	output:{
 		path: './dist',
@@ -43,7 +45,8 @@ var config = {
 	module:{
 		loaders:[
 			{test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader','css-loader')},
-			{test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader:'url-loader?limit=100&name=resource/[name].[ext]'}
+			{test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader:'url-loader?limit=100&name=resource/[name].[ext]'},
+			{test: /\.string$/, loader: 'html-loader'}			
 		]
 	},
 	resolve : {
@@ -64,8 +67,9 @@ var config = {
 		// css files
 		new ExtractTextPlugin('css/[name].css'),
 		// html template
-		new HtmlWebpackPlugin(getHtmlConfig('index')),
-		new HtmlWebpackPlugin(getHtmlConfig('login')),
+		new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+		new HtmlWebpackPlugin(getHtmlConfig('login', '用户登录')),
+		new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
 	]
 };
 

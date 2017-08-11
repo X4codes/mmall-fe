@@ -1,0 +1,28 @@
+/*
+* @Author: HUANGXI
+* @Date:   2017-08-11 09:52:11
+* @Last Modified by:   HUANGXI
+* @Last Modified time: 2017-08-11 13:48:10
+*/
+
+/*导航主题*/
+.nav-side{
+	float: left;
+	widows: 130px;
+	min-height: 100px;
+}
+.nav-side .nav-item{
+	line-height: 25px;
+	font-size: 13px;
+}
+.nav-side .nav-item .link{
+	color: #888;
+}
+.nav-side .nav-item.active .link{
+	color: #c60023;
+}
+/*右侧内容区*/
+.content.with-nav{
+	float: left;
+	width: 950px;
+}
