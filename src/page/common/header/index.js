@@ -2,7 +2,7 @@
 * @Author: HUANGXI
 * @Date:   2017-07-29 19:27:08
 * @Last Modified by:   HUANGXI
-* @Last Modified time: 2017-08-11 09:33:38
+* @Last Modified time: 2017-08-11 15:54:54
 */
 
 'use strict';
@@ -42,7 +42,7 @@ var header = {
 		var keyword = $.trim($('#search-input').val());
 		// 若有keyword，正常跳转到list页
 		if (keyword) {
-			window.location.href = './list.html?keyword' + keyword;
+			window.location.href = './list.html?keyword=' + keyword;
 		}
 		// 若无keyword，直接返回首页
 		else{

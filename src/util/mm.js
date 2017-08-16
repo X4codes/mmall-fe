@@ -2,7 +2,7 @@
 * @Author: HUANGXI
 * @Date:   2017-07-18 16:46:25
 * @Last Modified by:   HUANGXI
-* @Last Modified time: 2017-07-21 16:24:46
+* @Last Modified time: 2017-08-13 09:12:04
 */
 
 'use strict';
@@ -81,7 +81,7 @@ var _mm = {
 	},
 	// 统一登录处理
 	doLogin : function () {
-		window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href)
+		window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href)
 	},
 	goHome : function () {
 		window.location.href = './index.html';

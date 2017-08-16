@@ -2,7 +2,7 @@
 * @Author: HUANGXI
 * @Date:   2017-07-21 19:02:08
 * @Last Modified by:   HUANGXI
-* @Last Modified time: 2017-07-21 20:00:49
+* @Last Modified time: 2017-08-13 23:10:24
 */
 
 'use strict';
@@ -28,7 +28,7 @@ var nav = {
 		});
 		// 注册点击事件
 		$('.js-register').click(function () {
-			window.location.href = './register.html';
+			window.location.href = './user-register.html';
 		});
 		// 退出点击事件
 		$('.js-logout').click(function () {
