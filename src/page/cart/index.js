@@ -2,7 +2,7 @@
 * @Author: HUANGXI
 * @Date:   2017-08-23 15:23:38
 * @Last Modified by:   HUANGXI
-* @Last Modified time: 2017-08-25 19:58:49
+* @Last Modified time: 2017-08-29 08:03:06
 */
 
 'use strict';
@@ -129,7 +129,7 @@ var page = {
 		$(document).on('click', '.btn-submit', function (){
 			// 总价大于0，进行提交
 			if (_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0) {
-				window.location.href = './confirm.html';
+				window.location.href = './order-confirm.html';
 			}
 			else{
 				_mm.errorTips('请选择商品后在提交喵~');
